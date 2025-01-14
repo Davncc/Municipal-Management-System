@@ -1,0 +1,129 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #ecf0f5;
+}
+
+/* Body background image */
+body {
+    background-image: url('hall.jpg'); /* Replace 'hall.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Transparent overlay */
+body::before {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+    z-index: 0; /* Place below the form and content */
+}
+
+/* Main container styling */
+.register-container {
+    position: relative; /* Sit above the overlay */
+    z-index: 1; /* Ensures it's above the overlay */
+    background-color: rgba(44, 62, 80, 0.8); /* Dark transparent background */
+    width: 100%; /* Full width for responsiveness */
+    max-width: 450px; /* Max width for larger screens */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Optional: Adds a subtle blur effect */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+/* Heading styling */
+.register-container h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 28px; /* Larger heading font */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    color: white;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: black;
+    font-size: 16px; /* Larger text for input fields */
+}
+
+/* Button styling */
+button {
+    background-color: #576c82;
+    color: white;
+    border: none;
+    padding: 12px 0; /* Increased padding for height */
+    border-radius: 60px;
+    cursor: pointer;
+    width: 105%; /* Full width */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-align: center;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #abbbf8;
+    transform: scale(1.02);
+}
+
+/* Button active effect */
+button:active {
+    background-color: #3d8b40;
+    transform: scale(0.98);
+}
+
+/* Link styling */
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font for links */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        width: 90%; /* Ensure full width on smaller screens */
+        padding: 20px; /* Adjust padding on small screens */
+    }
+    .register-container h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+}
